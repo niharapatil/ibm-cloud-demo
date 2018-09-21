@@ -1,0 +1,27 @@
+{
+  "name": "server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node  ./server/app.js",
+    "test": "nodemon ./server/app.js"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "body-parser": "~1.13.2",
+    "cloudant": "^1.10.0-NOTICE",
+    "ejs": "^2.5.7",
+    "debug": "~2.2.0",
+    "express": "^4.13.4",
+    "jade": "~1.11.0",
+    "method-override": "^2.3.10",
+    "morgan": "^1.6.1",
+    "nodemon": "^1.17.2",
+    "serve-favicon": "^2.3.2",
+    "yargs": "^4.7.1",
+    "cfenv": "1.0.x"
+  },
+  "engines": {
+    "node": "6.10.3"
+  }
+}

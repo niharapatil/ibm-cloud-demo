@@ -1,0 +1,79 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="card">
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Title *</label>
+                                    <input class="form-control border-input" type="text" placeholder="Title" formControlName="title" required [(ngModel)]="addPost.title"
+                                        [ngClass]="{ 'is-invalid': submitted && f.title.errors }" />
+                                    <div *ngIf="submitted && f.title.errors" class="error">
+                                        <div *ngIf="f.title.errors.required">Please enter Title</div>
+                                        <div *ngIf="f.title.errors.minlength">Must be greater than four characters</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Author *</label>
+                                    <input type="text" class="form-control border-input" formControlName="author" placeholder="Author" name="addPost.author"
+                                        required [(ngModel)]="addPost.author" [ngClass]="{ 'is-invalid': submitted && f.updatedby.errors }">
+                                    <div *ngIf="submitted && f.author.errors" class="error">
+                                        <div *ngIf="f.author.errors.required">Please enter Author name</div>
+                                        <div *ngIf="f.author.errors.minlength">Must be greater than three characters</div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Updated By *</label>
+                                    <input type="text" class="form-control border-input" formControlName="updatedby" placeholder="Updated by" name="addPost.updatedby"
+                                        required [(ngModel)]="addPost.updatedby" [ngClass]="{ 'is-invalid': submitted && f.updatedby.errors }">
+                                    <div *ngIf="submitted && f.updatedby.errors" class="error">
+                                        <div *ngIf="f.updatedby.errors.required">Please enter Updated by</div>
+                                        <div *ngIf="f.updatedby.errors.minlength">Must be greater than three characters</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Description *</label>
+                                    <textarea rows="4" class="form-control border-input" formControlName="description" placeholder="Description" name="addPost.description"
+                                        required [(ngModel)]="addPost.description" [ngClass]="{ 'is-invalid': submitted && f.description.errors }"></textarea>
+                                    <div *ngIf="submitted && f.description.errors" class="error">
+                                        <div *ngIf="f.description.errors.required">Please enter Description</div>
+                                        <div *ngIf="f.description.errors.minlength">Must be greater than four characters</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="text-center">
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-info btn-fill btn-wd">Add Post</button>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</form>

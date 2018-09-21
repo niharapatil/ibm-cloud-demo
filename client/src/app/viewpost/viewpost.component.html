@@ -1,0 +1,27 @@
+<!-- data binding with curly braces interpolation -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+
+
+            <div *ngFor="let item of getdata[0]" class="card card-user">
+
+                <div class="content" style="min-height: 20px;">
+                    <h4 class="title" >
+                        {{item.title}}
+                        <br />
+                    </h4>
+                    <p class="description">
+                            {{item.description}}
+                        </p>
+                    <h5 >
+                        <small>Updated by {{item.author}} @ {{item.updatedTimeStamp | date :'short'}} </small>
+
+                    </h5>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
